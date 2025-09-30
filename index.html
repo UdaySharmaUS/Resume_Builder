@@ -325,5 +325,38 @@
         </div>
     </div>
 
+
+
+       <!-- now using JavaScript for the events of controls -->
+
+    <script type="text/javascript">
+
+        document.getElementById('add-experience').addEventListener('click',()=>{
+
+            const experienceSection = document.getElementById('experience-section');
+
+            const newExperience = document.createElement('div');
+
+            newExperience.className = 'experience-item';
+            newExperience.innerHTML = `
+              <h4 contenteditable="true" class="editable">Senior Position</h4>
+                    <p class="editable meta-info" contenteditable="true">
+                        Company Name | Location | 2020 - Present
+                    </p>
+                    <p class="editable" contenteditable="true">
+                        • Worked on cross platform applications using compose multplatform, maintaining and devloping new features.
+                    </p>
+                    <p class="editable" contenteditable="true">
+                        • Increased team productivity by 40% through process improvements and automation.
+                    </p>
+            `;
+            experienceSection.appendChild(newExperience);
+
+        });
+
+    </script>
+
+
+    
 </body>
 </html>
