@@ -353,7 +353,38 @@
             experienceSection.appendChild(newExperience);
 
         });
+      document.getElementById('add-education').addEventListener('click',()=>{
 
+            const educationsection = document.getElementById('education-section');
+
+            const neweducation = document.createElement('div');
+            neweducation.className = 'education-item';
+            neweducation.innerHTML = `
+              <h4 contenteditable="true" class="editable">Bachelor of Engineering</h4>
+                    <p class="editable meta-info" contenteditable="true">
+                        University Name | Location | 2016 - 2020
+                    </p>
+                    <p class="editable" contenteditable="true">
+                        • Graduated with a CGPA of 8.72.
+                    </p>
+                    <p class="editable" contenteditable="true">
+                        • Gone through CS core subjects like OOPS, DBMS, OS, CN , DSA.
+                    </p>
+            `;
+     
+            educationsection.appendChild(neweducation);
+        });
+
+          document.getElementById('add-skill').addEventListener('click',()=>{
+                const skillsContainer = document.getElementById('skills-container');
+
+                const newSkill = document.createElement('span');
+                newSkill.className="skill-tag";
+
+                newSkill.contentEditable = "true";
+                newSkill.textContent = "New Skill";
+                skillsContainer.appendChild(newSkill);
+        });
     </script>
 
 
